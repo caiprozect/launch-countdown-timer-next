@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,10 +13,22 @@
   }
 }
 
+@keyframes lightUp {
+  from {
+    color: white;
+  }
+  to {
+    color: #8486a9;
+  }
+}
+
 .flipX {
   animation: flipX 0.8s ease-in-out 1;
   transform: rotateX(180deg);
   transform-origin: bottom;
+}
+.lightUp {
+  animation: lightUp 1s ease-in-out 1;
 }
 .staticFlipX {
   transform: rotateX(180deg);
