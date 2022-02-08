@@ -2,6 +2,10 @@ import Head from 'next/head'
 import { useEffect, useRef, useState } from 'react'
 import FlippingCard from '../components/FlippingCard'
 
+import Facebook from '../public/icon-facebook.svg'
+import Pinterest from '../public/icon-pinterest.svg'
+import Instagram from '../public/icon-instagram.svg'
+
 export default function Home() {
   const dday = new Date(2022, 5, 16)
 
@@ -10,7 +14,7 @@ export default function Home() {
 
   const [remain, setRemain] = useState(dday.getTime() - new Date().getTime())
 
-  console.log(delay.current)
+  // console.log(delay.current)
 
   useEffect(() => {
     const startTime = Date.now()
@@ -71,7 +75,11 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex h-[24%] w-full items-center justify-center bg-[url(/pattern-hills.svg)] bg-cover"></footer>
+      <footer className="flex h-[24%] w-full items-center justify-center space-x-24 bg-[url(/pattern-hills.svg)] bg-cover">
+        <Facebook className="scale-150 cursor-pointer fill-[#8385A9] hover:fill-[#fb6087]" />
+        <Pinterest className="scale-150 cursor-pointer fill-[#8385A9] hover:fill-[#fb6087]" />
+        <Instagram className="scale-150 cursor-pointer fill-[#8385A9] hover:fill-[#fb6087]" />
+      </footer>
     </div>
   )
 }

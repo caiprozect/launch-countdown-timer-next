@@ -15,6 +15,7 @@ function FlippingCard({ cur, mod, cat }) {
             className="absolute h-full w-full overflow-hidden rounded-b-xl bg-[#343650] text-center text-7xl"
             style={{
               transform: 'rotateX(180deg)',
+              backfaceVisibility: 'hidden',
             }}
           >
             <p className="mt-[1.8rem] -translate-y-16">
