@@ -47,11 +47,11 @@ export default function Home() {
 
       <main className="threeD flex h-[76%] w-full flex-col items-center bg-[url(/bg-stars.svg)] bg-cover">
         <section className="flex h-[40%] flex-col justify-end">
-          <h1 className="pb-16 text-3xl tracking-[0.5rem] text-white">
+          <h1 className="pb-16 text-center text-xl tracking-[0.5rem] text-white md:text-3xl">
             WE'RE LAUNCHING SOON
           </h1>
         </section>
-        <section className="flex h-[36%] justify-center space-x-12">
+        <section className="mt-4 flex h-[36%] justify-center space-x-4 md:mt-8 md:space-x-12">
           <FlippingCard
             cur={Math.floor(remain / (24 * 60 * 60 * 1000)) % 365}
             mod={365}
@@ -75,10 +75,10 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="flex h-[24%] w-full items-center justify-center space-x-24 bg-[url(/pattern-hills.svg)] bg-cover">
-        <Facebook className="scale-150 cursor-pointer fill-[#8385A9] hover:fill-[#fb6087]" />
-        <Pinterest className="scale-150 cursor-pointer fill-[#8385A9] hover:fill-[#fb6087]" />
-        <Instagram className="scale-150 cursor-pointer fill-[#8385A9] hover:fill-[#fb6087]" />
+      <footer className="flex h-[24%] w-full items-center justify-center space-x-12 bg-[url(/pattern-hills.svg)] bg-cover md:space-x-24">
+        <Facebook className="cursor-pointer fill-[#8385A9] hover:fill-[#fb6087] md:scale-150" />
+        <Pinterest className="cursor-pointer fill-[#8385A9] hover:fill-[#fb6087] md:scale-150" />
+        <Instagram className="cursor-pointer fill-[#8385A9] hover:fill-[#fb6087] md:scale-150" />
       </footer>
     </div>
   )
