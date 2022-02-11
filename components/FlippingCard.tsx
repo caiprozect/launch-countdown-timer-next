@@ -1,4 +1,12 @@
-function FlippingCard({ cur, mod, cat }) {
+function FlippingCard({
+  cur,
+  mod,
+  cat,
+}: {
+  cur: number
+  mod: number
+  cat: string
+}) {
   const prev = (cur + 1) % mod
   return (
     <main className="flex flex-col space-y-12 md:space-y-24">
